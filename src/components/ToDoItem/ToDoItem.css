@@ -1,0 +1,39 @@
+.toDoItemContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.toDoItemContainer__left {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+.toDoItemContainer__right {
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+.toDoItemContainer__right__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

@@ -1,0 +1,12 @@
+.toDoListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    background-color: #8fbc8f;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+}

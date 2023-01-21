@@ -1,0 +1,14 @@
+.app__mainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;;
+    gap: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #d2ebcd;
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
+}

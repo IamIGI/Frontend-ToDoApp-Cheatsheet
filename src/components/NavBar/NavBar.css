@@ -1,0 +1,19 @@
+.app__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #82b74b;
+    color: white;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.app__navbar__button:hover {
+    color: #82b74b;
+    border: 0px transparent;
+}
+
+.app__navbar__button h2 {
+    font-size: 20px;
+}
