@@ -7,7 +7,9 @@ const SearchSection = () => {
             <div className="searchSection__relative">
                 <input className="searchSection__searchField" />
                 <div className="searchSection__button">
-                    <BsSearch />
+                    <div>
+                        <BsSearch />
+                    </div>
                 </div>
                 <div className="searchSection__searchDescription">Wyszukiwanie</div>
             </div>

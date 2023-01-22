@@ -59,9 +59,23 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+.searchSection__button div {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+}
 
 .searchSection__button:hover {
     color: green;
     cursor: pointer;
     border: 1px solid grey;
+}
+
+.searchSection__button div:hover {
+    transform: scale(1.4, 1.4);
 }
