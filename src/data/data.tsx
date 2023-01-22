@@ -6,6 +6,15 @@ export interface ToDoDataInterface {
     __v?: number;
 }
 
+export const BASE_URL = import.meta.env.DEV ? 'http://localhost:5000' : '/api';
+
+export const ToDoDataMock = {
+    _id: '',
+    userName: '',
+    title: '',
+    date: '',
+};
+
 export const toDoData: ToDoDataInterface[] = [
     {
         _id: '63cbed3188ecf2cbe166b52c',

@@ -1,5 +1,9 @@
+import { store } from 'app/store';
 import { ToDoDataInterface } from 'data/data';
-import React, { useState, SyntheticEvent } from 'react';
+import { AddToDoInterface, EditToDoInterface } from 'features/toDo/toDoInterfaces';
+import { addToDo, editToDo, refreshTodoList } from 'features/toDo/toDoSlice';
+import { useState, SyntheticEvent } from 'react';
+import { useDispatch } from 'react-redux/es/exports';
 import './PopUpWindow.css';
 
 interface PopUpWindowProps {
@@ -9,16 +13,32 @@ interface PopUpWindowProps {
 }
 
 const PopUpWindow = ({ createItem = false, toDoData, onClose }: PopUpWindowProps) => {
+    const dispatchStore = useDispatch();
     const [input, setInput] = useState<string>('');
     const [content, setContent] = useState<string>('');
 
-    const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (content && (input || !createItem)) {
-            console.log(toDoData?._id);
-            console.log('hello');
+            if (createItem) {
+                const addToDo_object: AddToDoInterface = {
+                    userName: input,
+                    title: content,
+                };
+                store.dispatch(addToDo(addToDo_object)).then(() => {
+                    dispatchStore(refreshTodoList());
+                });
+            } else {
+                const editToDo_object: EditToDoInterface = {
+                    id: toDoData?._id as string,
+                    title: content,
+                };
+                store.dispatch(editToDo(editToDo_object)).then(() => {
+                    dispatchStore(refreshTodoList());
+                });
+            }
+
             onClose();
-            return;
         }
 
         return;
