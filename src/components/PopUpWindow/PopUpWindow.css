@@ -1,0 +1,92 @@
+.PopUpWindow {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.PopUpWindow form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    /* border: 1px solid red; */
+    padding: 5px;
+}
+
+.PopUpWindow__userName {
+}
+
+.PopUpWindow__userName__relative {
+    position: relative;
+}
+
+.PopUpWindow__userName__relative div {
+    position: absolute;
+    background-color: white;
+    padding: 0px 10px;
+    font-size: 16px;
+    top: -10px;
+    right: 15px;
+}
+
+.PopUpWindow__userName input {
+    border-radius: 5px;
+    height: 35px;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 1px solid gray;
+}
+
+.PopUpWindow__userName input:hover {
+    border: 1px solid green;
+}
+
+.PopUpWindow__userName input:focus {
+    outline-width: 0;
+    border: 1px solid green;
+}
+
+.PopUpWindow__content {
+    position: relative;
+}
+
+.PopUpWindow__content textarea {
+    border-radius: 5px;
+    height: 60px;
+    max-height: 60px;
+    min-width: 190px;
+    max-width: 400px;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 1px solid gray;
+}
+
+.PopUpWindow__content textarea:hover {
+    border: 1px solid green;
+}
+
+.PopUpWindow__content textarea:focus {
+    outline-width: 0;
+    border: 1px solid green;
+}
+
+.PopUpWindow__content div {
+    position: absolute;
+    background-color: white;
+    padding: 0px 10px;
+    font-size: 16px;
+    top: -10px;
+    right: 15px;
+}
+
+.PopUpWindow__button {
+}

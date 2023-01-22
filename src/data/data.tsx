@@ -3,7 +3,7 @@ export interface ToDoDataInterface {
     userName: string;
     title: string;
     date: string;
-    __v: number;
+    __v?: number;
 }
 
 export const toDoData: ToDoDataInterface[] = [
